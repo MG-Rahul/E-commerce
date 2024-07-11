@@ -1,0 +1,235 @@
+/* UserAddress.css */
+
+.address-container {
+  width: 100%;
+  margin: 5px auto;
+  background-color: #fff;
+  padding: 0 10px;
+  border-radius: 8px;
+   
+  margin-bottom: 100px;
+}
+
+.address-container h2 {
+  font-size: 1.7rem;
+  text-align: center;
+  background-color: aqua;
+  color: #333;
+  margin-top: -5px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  z-index: 9999;
+}
+
+.address-container .button-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: aqua;
+  padding-bottom: 10px;
+}
+
+.address-container .button-list button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.address-container .button-list button.active {
+  background-color: #000000;
+  color: white;
+}
+.address-container .button-list button.inactive {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.address-container .button-list button:hover {
+  background-color: #04fe00;
+  color: #000000;
+}
+.address-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-top: 20px;
+}
+.address {
+  background-color: #f0f0f0;
+  padding: 10px;
+  padding-bottom: 3px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+/* Style the radio buttons to look like checkboxes */
+.address > .select > .radio-checkbox {
+  cursor: pointer;
+}
+.address > .select > .radio-label {
+  padding-left: 10px;
+  font-size: 1.1rem;
+  color: #03cf00;
+}
+
+.address-container > .address-list > .address > .addres-phone,
+.address-container > .address-list > .address > .addres-name,
+.address-container > .address-list > .address > .btton {
+  display: flex;
+  width: 100%;
+  margin-bottom: 4px;
+}
+.address-container > .address-list > .address > .addres-phone > p,
+.address-container > .address-list > .address > .addres-name > p,
+.address-container > .address-list > .address > .btton > p {
+  text-transform: capitalize;
+  text-align: justify;
+  margin-right: 4px;
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 4px;
+}
+.address-container > .address-list > .address > .addres-phone > p:first-child,
+.address-container > .address-list > .address > .addres-name > p:first-child {
+  width: 30%;
+  text-transform: none;
+}
+.address-container > .address-list > .address > .addres-phone > p:last-child,
+.address-container > .address-list > .address > .addres-name > p:last-child {
+  width: 70%;
+  text-transform: none;
+}
+
+.address-container > .address-list > .address > .btton > p > a > button {
+  color: #0056b3;
+  border: none;
+  background-color: transparent;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.address-container > .address-list > .address > .btton > p > a:first-child {
+  padding-right: 5px;
+  border-right: 2px solid #8e8989;
+}
+.address-container > .address-list > .address > .btton > p > a:last-child {
+  padding-left: 5px;
+}
+.address-container > .address-list > .address > .btton > p > a > button:hover {
+  text-decoration: underline;
+}
+.btton hr {
+  margin: 0 10px;
+  border: none;
+  border-left: 1px solid #ddd;
+  height: 30px;
+}
+
+/* add  users starts here  */
+.address-container > .add-address {
+  width: 60%;
+  margin: 0 auto;
+}
+.address-container > .add-address > .form {
+  margin: 20px 0;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
+}
+.address-container .add-address .form-control {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.address-container .add-address .form-control.phone,
+.address-container .add-address .form-control.email {
+  flex-direction: column;
+}
+.address-container .add-address .form-control div {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.address-container .add-address .form-control div:last-child {
+  margin-right: 0;
+}
+
+.address-container .add-address .form-control label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.address-container .add-address .form-control input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.address-container .add-address .form-control--submit {
+  text-align: center;
+}
+
+.address-container .add-address .form-control--submit button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.address-container .add-address .form-control--submit button:hover {
+  background-color: #0056b3;
+}
+
+/* add  users ends here  */
+
+/* media queries */
+@media screen and (max-width: 992px) {
+  .address-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .address-container > .address-list > .address > .addres-phone > p,
+  .address-container > .address-list > .address > .addres-name > p,
+  .address-container > .address-list > .address > .btton > p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .address-container > .address-list > .address > .btton > p > a > button {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  .address {
+    margin-bottom: 0;
+  }
+  .address-list {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .address-container > .address-list > .address > .addres-phone > p,
+  .address-container > .address-list > .address > .addres-name > p,
+  .address-container > .address-list > .address > .btton > p {
+    font-size: 0.6rem;
+  }
+  .address-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .address-container .button-list button {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+  .address-container > .address-list > .address > .btton > p > a > button {
+    font-size: 0.7rem;
+  }
+}

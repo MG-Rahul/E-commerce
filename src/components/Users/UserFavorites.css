@@ -1,0 +1,134 @@
+.favorites-product {
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
+/* UserFavorites.css */
+
+.favorites-product > .favorites-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* Individual favorite item styling */
+.favorites-product > .favorites-container > .favorite {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.favorites-product > .favorites-container > .favorite:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Favorite image styling */
+.favorites-product > .favorites-container > .favorite > .favorite-img {
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.favorites-product > .favorites-container > .favorite > .favorite-img img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.favorites-product
+  > .favorites-container
+  > .favorite
+  > .favorite-img.favorite-active {
+  border: 2px solid #ff6b6b;
+}
+
+/* Favorite info styling */
+.favorites-product > .favorites-container > .favorite > .favorite-info {
+  text-align: center;
+}
+
+.favorites-product > .favorites-container > .favorite > .favorite-info h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.favorites-product > .favorites-container > .favorite > .favorite-info p {
+  color: #666;
+}
+
+/* Favorite button styling */
+.favorites-product > .favorites-container > .favorite > .favorite-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.favorite-btn button {
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.favorite-btn button:hover {
+  background-color: #ff4a4a;
+}
+/* UserFavorites.css */
+
+/* Empty favorite message styling */
+.empty-favorite {
+  background: #ffffff;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1),
+    -4px -4px 8px rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.empty-favorite h3 {
+  font-size: 1.8em;
+  color: #ff6b6b;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.empty-favorite p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.empty-favorite a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1.1em;
+}
+
+.empty-favorite a:hover {
+  background-color: #ff4a4a;
+  transform: scale(1.05);
+}
+
+.empty-favorite a:active {
+  background-color: #ff2a2a;
+  transform: scale(0.95);
+}

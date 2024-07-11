@@ -1,0 +1,327 @@
+.payment-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.left-side,
+.right-side {
+  position: relative;
+  width: 50%;
+  background-color: #f5f5f5; /* Background color */
+  padding: 20px; /* Padding inside the left side */
+  border-radius: 8px;
+}
+
+.left-side h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.left-side > ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 30px;
+}
+
+.left-side > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.left-side > ul > li > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1.4rem;
+  color: #007bff;
+}
+.left-side > ul > li > span > strong {
+  font-size: 1.2rem;
+  margin-right: -5px;
+}
+
+.right-side h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.payment-options {
+  margin-bottom: 20px;
+}
+
+.right-side > .payment-options > .bank-names {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.right-side > .payment-options > .bank-names > h2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #333;
+  background-color: #e3e98b;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.right-side > .payment-options > .bank-names > h2:first-child {
+  background-color: #007bff;
+  color: #fff;
+}
+.right-side > .payment-options > .bank-names > h2.active {
+  background-color: #007bff;
+  color: #fff;
+  position: relative; /* Ensure that the ::after element is positioned relative to the h2 */
+}
+
+.right-side > .payment-options > .bank-names > h2.active::after {
+  content: "";
+  position: absolute;
+  bottom: -15px; /* Adjust as needed to position the arrow correctly */
+  left: 50%; /* Center the arrow horizontally */
+  transform: translateX(-50%); /* Ensure the arrow is centered */
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid #007bff; /* Color of the arrow */
+}
+.right-side > .payment-options > .bank-names > h2.inactive {
+  background-color: #e3e98b;
+  color: #333;
+}
+
+.right-side > .account-types {
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 5px 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.3rem;
+}
+.right-side > .account-types.card {
+  margin-bottom: 110px;
+}
+.right-side > .account-types > h2 {
+  width: 100%;
+  height: 100%;
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  color: #333;
+}
+.right-side > .account-types > h2:hover {
+  background-color: #071c31;
+  color: #fff;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  outline: none;
+}
+.right-side > .account-types > h2 > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+.right-side > .account-types > h2 > p {
+  font-size: 0.8rem;
+}
+
+.right-side > .account-types > h2 > img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.left-side > .exit {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+}
+.right-side > .exit {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  text-align: center;
+  background-color: #04ff92;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+.right-side > .exit > button,
+.left-side > .exit > a > button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #007bff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.right-side > .exit > button:hover,
+.left-side > .exit > a > button:hover {
+  background-color: #0056b3;
+}
+.right-side > .exit > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+.right-side > .exit > p > .call {
+  font-size: 1.9rem;
+  color: #fff;
+  background-color: #071c31;
+  padding: 5px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Container for the message */
+.add-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+/* Message box */
+.message {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Heading */
+.message > h2 {
+  color: #007bff; /* Blue color for emphasis */
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Paragraph */
+.message > p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.message > button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.message > button:hover {
+  background-color: #0056b3;
+}
+
+.empty-cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+.empty-cart-container > .empty {
+  padding: 30px 100px;
+  border: 2px dotted rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.empty-cart-container > .empty > h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  color: #ff6347;
+}
+
+.empty-cart-container > .empty > p {
+  font-size: 1.2em;
+  color: #6c757d;
+  margin-bottom: 1.5em;
+}
+
+.shopping-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.shopping-button:hover {
+  background-color: #0056b3;
+  border-color: #003f7f;
+}
+
+/* media queries starts here  */
+@media screen and (max-width: 768px) {
+  .payment-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .left-side,
+  .right-side {
+    width: 100%;
+    background-color: #f5f5f5; /* Background color */
+    padding: 20px; /* Padding inside the left side */
+    border-radius: 8px;
+  }
+  .left-side > ul {
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,15 @@
+.UserReturns {
+  height: 70vh;
+  width: 100%;
+  position: relative;
+}
+.UserReturns > h3 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #ccc;
+  padding: 30px 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}

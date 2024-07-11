@@ -1,0 +1,142 @@
+.signIn-container {
+  width: 100%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signIn-container .form-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #fffcfc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.signIn-container .form-container .form-container__titile {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.signIn-container .form-container .form-container__form-control {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.signIn-container .form-container .form-container__form-control > .error {
+  color: red;
+  font-size: 0.8rem;
+}
+.col-divided {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+.signIn-container .form-container .form-container__form-control label {
+  font-size: 0.8rem;
+  color: #6d6767;
+}
+.signIn-container .form-container .form-container__form-control input,
+.signIn-container .form-container .form-container__form-control select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+}
+.signIn-container
+  .form-container
+  .form-container__form-control
+  input.input-empty {
+  border: 1px solid red;
+}
+.signIn-container .form-container .form-container__form-control input:focus {
+  border: 1px solid #1df012;
+}
+.signIn-container .form-container .form-container__form-control button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #1df012;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+  background-color: #1df012;
+  color: #fffcfc;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.signIn-container .form-container .form-container__form-control button:hover {
+  background-color: #6dff0b;
+  color: #070707;
+}
+
+.col-divided > .col-container > input.input-empty {
+  border: 1px solid red;
+}
+.col-divided > .col-container > .error {
+  font-size: 0.8rem;
+  color: red;
+  margin-top: 10px;
+}
+/* list item  */
+form ul {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+form ul .forgot {
+  color: #1738ef;
+}
+form ul .create-account {
+  color: red;
+}
+
+/* media queries starts here */
+
+@media screen and (max-width: 768px) {
+  .signIn-container .form-container {
+    width: 80%;
+  }
+  .signIn-container .form-container .form-container__titile {
+    font-size: 1.5rem;
+  }
+  .signIn-container .form-container .form-container__form-control {
+    width: 100%;
+  }
+  .col-divided {
+    flex-direction: column;
+  }
+  .col-divided > .col-container > input.input-empty {
+    border: 1px solid red;
+  }
+  .col-divided > .col-container > .error {
+    font-size: 0.8rem;
+    color: red;
+    margin-top: 10px;
+  }
+  .signIn-container .form-container .form-container__form-control input {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .signIn-container .form-container .form-container__form-control button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}
+/* media queries ends here */

@@ -1,0 +1,94 @@
+.contact__container {
+  width: 50%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(17, 205, 205);
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.contact__container .form__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.contact__container .form__container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contact__container .form__container .form-control {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+}
+
+.contact__container .form__container .form-control > .error {
+  color:#dc3545;
+  font-size: 0.975em;
+  margin-top: 5px;
+}
+.contact__container .form__container .form-control button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: #17c01a;
+  color: #fff;
+  cursor: pointer;
+}
+.contact__container .form__container .form-control input,
+.contact__container .form__container .form-control textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+  color: #262525;
+}
+.contact__container .form__container .form-control textarea {
+  resize: none;
+}
+.contact__container .form__container .form-control input.filed-errors,
+.contact__container .form__container .form-control textarea.filed-errors {
+  border: 2px solid red;
+}
+
+/* media queries  */
+@media screen and (max-width: 992px) {
+  .contact__container {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact__container {
+    width: 70%;
+  }
+  .contact__container .form__container .form-control input,
+  .contact__container .form__container .form-control textarea {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  .contact__container {
+    width: 80%;
+  }
+}

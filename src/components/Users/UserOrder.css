@@ -1,0 +1,172 @@
+.order-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.order-container > .order-information {
+  width: 100%;
+  background-color: aliceblue;
+  padding: 10px;
+}
+.order-container > .order-information > table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+.order-container > .order-information > table > thead {
+  background-color: aqua;
+  width: 100%;
+}
+.order-container > .order-information > table > thead > tr > th {
+  padding: 10px 20px;
+}
+
+.order-container > .order-information > table > tbody > tr > td {
+  padding: 10px;
+  text-align: center;
+}
+.order-container > .order-information > table th,
+.order-container > .order-information > table td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+.order-container > .order-information > table td > button {
+  width: 100%;
+  padding: 4px 5px;
+  border: none;
+  outline: none;
+   background-color: rgb(22, 255, 6);
+  color: rgb(12, 10, 10);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+}
+.order-container > .order-information > table td > button:hover {
+  background-color: aquamarine;
+}
+
+.order-container > .order-details-show {
+  width: 60%;
+  height: 70vh;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: bisque;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.order-container > .order-details-show > .order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(83, 248, 0);
+  padding: 10px;
+  height: 50px;
+}
+.order-container > .order-details-show > .order-header button {
+  cursor: pointer;
+}
+.order-container > .order-details-show > .order-details {
+  overflow-y: scroll;
+  width: 100%;
+  height: calc(100% - 50px);
+  position: absolute;
+  left: 0;
+}
+.order-container > .order-details-show > .order-details > .order-product {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.order-container
+  > .order-details-show
+  > .order-details
+  > .order-product
+  > .product {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 2px solid #eee;
+}
+.order-container
+  > .order-details-show
+  > .order-details
+  > .order-product
+  > .product
+  > .product-img-name {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+.order-container
+  > .order-details-show
+  > .order-details
+  > .order-product
+  > .product
+  > .product-img-name
+  > .product-img {
+  border: 2px solid rgb(12, 10, 10);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+.order-container
+  > .order-details-show
+  > .order-details
+  > .order-product
+  > .product
+  > .product-img-name
+  > .product-img
+  > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.back-home {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: rgb(22, 255, 6);
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.back-home:hover {
+  background-color: rgb(70, 215, 60);
+}
+/* media queries  */
+@media screen and (max-width: 1100px) {
+  /* .order-container > .order-details-show {
+    margin-top: 10%;
+    height: 60vh;
+  } */
+}
+@media screen and (max-width: 992px) {
+  .order-container > .order-details-show {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  table {
+    font-size: 0.8rem;
+  }
+  .order-container > .order-information > table > thead > tr > th {
+    padding: 10px;
+  }
+
+  .order-container > .order-information > table > tbody > tr > td {
+    padding: 5px;
+    text-align: center;
+  }
+  .order-container > .order-information > table td > button {
+    font-size: 0.8rem;
+  }
+}
