@@ -27,7 +27,7 @@ const SignIn = () => {
         userData.email
       )
     ) {
-      errors.email = "Invalid email format";
+      error.email = "Invalid email format";
     }
 
     if (!userData.password.trim()) {
