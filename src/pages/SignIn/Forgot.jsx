@@ -26,7 +26,7 @@ const Forgot = () => {
         email.email
       )
     ) {
-      errors.email = "Invalid email format";
+      error.email = "Invalid email format";
     }
 
     return error;
